@@ -1,4 +1,7 @@
-﻿using _2.EnvelopeAnalysis.Logic;
+﻿using _2.EnvelopeAnalysis.Controller;
+using _2.EnvelopeAnalysis.Logic;
+using _2.EnvelopeAnalysis.View;
+using ConsoleTaskLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +14,24 @@ namespace _2.EnvelopeAnalysis
     {
         static void Main(string[] args)
         {
-            Envelope env1 = new Envelope(10,20);
-            Envelope env2 = new Envelope(5,5);
+            try
+            {
+                if (args.Length != 4)
+                {
+                    throw new ArgumentException();
+                }
 
-            EnvelopeAnalysator analysator = new EnvelopeAnalysator(env1);
+                EnvelopeController controller = new EnvelopeController();
 
-            Console.WriteLine(analysator.CompareTo(env2)); 
+                controller.StartEnvelopeExecution(args[0], args[1], args[2], args[3]);
+            }
+            catch (Exception)
+            {
+                ConsolePrinter _printer = new ConsolePrinter();
+                _printer.ShowInstruction(Constant.INSTRUCTION, Constant.FIRST_ARGUMENT, Constant.SECOND_ARGUMENT,
+                        Constant.THIRD_ARGUMENT, Constant.FOURTH_ARGUMENT);
+                throw;
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ namespace _2.EnvelopeAnalysis.Logic
             MainEnvelope = mainEnvelope; 
         }
 
-        Envelope MainEnvelope { get; set; }
+        public Envelope MainEnvelope { get; set; }
 
         public int CompareTo(Envelope comparedEnvelope)
         {
