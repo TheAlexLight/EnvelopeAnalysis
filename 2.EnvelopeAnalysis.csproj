@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAnalysator.cs" />
+    <Compile Include="Logic\Envelope.cs" />
+    <Compile Include="Logic\EnvelopeAnalysator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
