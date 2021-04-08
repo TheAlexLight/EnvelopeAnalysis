@@ -21,5 +21,11 @@ namespace _2.EnvelopeAnalysis.View
         public const string CANNOT_INSERT_ENVELOPE = "Second envelope cannot be inserted in the first";
         public const string ERROR_OCCURED = "ERROR occured";
         public const string START_PROGRAM_AGAIN = "ERROR occured";
+        public const string RESTART_PROGRAM_PROMPT = @"Do you want to restart program?(Write ""y"" or ""yes"" to accept): ";
+        public const string SIMPLE_YES = "Y";
+        public const string YES = "Yes";
+        public const string ENTER_PROMPT = "Enter new envelope data: <first length>, <first width>, <second length>, <second width>";
+        public const string WRONG_NEW_ARGUMENTS = "Wrong envelope data";
     }
+
 }
